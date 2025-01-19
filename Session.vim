@@ -16,11 +16,12 @@ endif
 badd +25 lifeLogger/2025/2025-01-14.md
 badd +3 ~/.config/nvim/ftplugin/markdown.lua
 badd +19 ~/Programming/blog/lifeLogger/2025/2025-01-16.md
+badd +6 ~/Programming/blog/lifeLogger/2025/2025-01-19.md
 argglobal
 %argdel
-edit ~/Programming/blog/lifeLogger/2025/2025-01-16.md
+edit ~/Programming/blog/lifeLogger/2025/2025-01-19.md
 argglobal
-balt lifeLogger/2025/2025-01-14.md
+balt ~/Programming/blog/lifeLogger/2025/2025-01-16.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -31,12 +32,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 19 - ((18 * winheight(0) + 29) / 58)
+let s:l = 6 - ((5 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 19
-normal! 043|
+keepjumps 6
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
