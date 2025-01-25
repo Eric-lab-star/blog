@@ -13,15 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +25 lifeLogger/2025/2025-01-14.md
-badd +3 ~/.config/nvim/ftplugin/markdown.lua
-badd +19 ~/Programming/blog/lifeLogger/2025/2025-01-16.md
-badd +6 ~/Programming/blog/lifeLogger/2025/2025-01-19.md
+badd +16 bookLogger/어른의_행복은_조용하다.md
 argglobal
 %argdel
-edit ~/Programming/blog/lifeLogger/2025/2025-01-19.md
+edit bookLogger/어른의_행복은_조용하다.md
 argglobal
-balt ~/Programming/blog/lifeLogger/2025/2025-01-16.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -32,11 +28,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 6 - ((5 * winheight(0) + 29) / 58)
+let s:l = 16 - ((15 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 6
+keepjumps 16
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
